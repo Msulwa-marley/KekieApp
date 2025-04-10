@@ -39,7 +39,7 @@ app.use("*",(_,res) => {
     res.sendFile(path.resolve(DIRNAME, "client","dist","index.html"));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
     connectDB();
     console.log(`Server listen at port ${PORT}`);
 });
